@@ -14,6 +14,6 @@ RUN pip install detectron2 -f \
 
 RUN pip install opencv-python-headless \
     mlflow azure-storage-blob azure-identity
-RUN pip uninstall protobuf && pip install protobuf==3.20.1
+RUN pip uninstall -y protobuf && pip install protobuf==3.20.1
 
 CMD [ "bash" ]
