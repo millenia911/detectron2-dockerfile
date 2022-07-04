@@ -13,7 +13,9 @@ RUN pip install detectron2 -f \
     https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
 
 RUN pip install opencv-python-headless \
-    mlflow azure-storage-blob azure-identity
+    mlflow azure-storage-blob azure-identity \
+    dvc[s3] dvc[azure]
+
 RUN pip uninstall -y protobuf && pip install protobuf==3.20.1
 
 CMD [ "bash" ]
